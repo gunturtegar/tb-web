@@ -1,63 +1,4 @@
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="codepixer">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Car Rentals</title>
-
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<!--
-			CSS
-			============================================= -->
-			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/linearicons.css">
-			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/font-awesome.min.css">
-			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/bootstrap.css">
-			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/magnific-popup.css">
-			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/nice-select.css">					
-			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/animate.min.css">
-			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">			
-			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/owl.carousel.css">
-			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/main.css">
-		</head>
-		<body>
-
-			  <header id="header" id="home">
-			    <div class="container">
-			    	<div class="row align-items-center justify-content-between d-flex">
-				      <div id="logo">
-				        <a href="index.html"><img src="<?php echo base_url('template_user/') ?>img/logo.png" alt="" title="" /></a>
-				      </div>
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="index.html">Home</a></li>
-				          <li><a href="about.html">About</a></li>
-				          <li><a href="cars.html">Cars</a></li>
-				          <li><a href="service.html">Service</a></li>
-				          <li><a href="team.html">Team</a></li>	
-				          <li><a href="blog-home.html">Blog</a></li>	
-				          <li><a href="contact.html">Contact</a></li>	
-				          <li class="menu-has-children"><a href="">Pages</a>
-				            <ul>
-				              <li><a href="blog-single.html">Blog Single</a></li>
-				              <li><a href="elements.html">Elements</a></li>
-				            </ul>
-				          </li>			          
-				        </ul>
-				      </nav><!-- #nav-menu-container -->		    		
-			    	</div>
-			    </div>
-			  </header><!-- #header -->
+	<?php $this->load->view('template_user/header') ?>
 
 
 			<!-- start banner Area -->
@@ -78,8 +19,8 @@
 						<div class="col-lg-5  col-md-6 header-right">
 							<h4 class="text-white pb-30">Book Your Car Today!</h4>
 							<form class="form" role="form" autocomplete="off">
-							    <div class="form-group">
-							       	<div class="default-select" id="default-select"">
+								<div class="form-group">
+									<div class="default-select" id="default-select"">
 										<select>
 											<option value="" disabled selected hidden>Select Your Car</option>
 											<option value="1">BMW</option>
@@ -87,10 +28,10 @@
 											<option value="1">Toyota</option>
 										</select>
 									</div>
-							    </div>
-							    <div class="form-group row">
-							        <div class="col-md-6 wrap-left">
-								       	<div class="default-select" id="default-select"">
+								</div>
+								<div class="form-group row">
+									<div class="col-md-6 wrap-left">
+										<div class="default-select" id="default-select"">
 											<select>
 												<option value="" disabled selected hidden>Pickup</option>
 												<option value="1">Pickup One</option>
@@ -99,19 +40,19 @@
 												<option value="1">Pickup Four</option>
 											</select>
 										</div>
-							        </div>
-							        <div class="col-md-6 wrap-right">
+									</div>
+									<div class="col-md-6 wrap-right">
 										<div class="input-group dates-wrap">                                          
 											<input id="datepicker" class="dates form-control" id="exampleAmount" placeholder="Date & time" type="text">                        
 											<div class="input-group-prepend">
 												<span  class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
 											</div>											
 										</div>
-							        </div>
-							    </div>
-							    <div class="form-group row">
-							        <div class="col-md-6 wrap-left">
-								       	<div class="default-select" id="default-select"">
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-md-6 wrap-left">
+										<div class="default-select" id="default-select"">
 											<select>
 												<option value="" disabled selected hidden>Drop off</option>
 												<option value="1">Drop off One</option>
@@ -120,26 +61,26 @@
 												<option value="1">Drop off Four</option>
 											</select>
 										</div>
-							        </div>
-							        <div class="col-md-6 wrap-right">
+									</div>
+									<div class="col-md-6 wrap-right">
 										<div class="input-group dates-wrap">                                              
 											<input id="datepicker2" class="dates form-control" id="exampleAmount" placeholder="Date & time" type="text">                        
 											<div class="input-group-prepend">
 												<span  class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
 											</div>											
 										</div>
-							        </div>
-							    </div>							    
-							    <div class="from-group">
-							    	<input class="form-control txt-field" type="text" name="name" placeholder="Your name">
-							    	<input class="form-control txt-field" type="email" name="email" placeholder="Email address">
-							    	<input class="form-control txt-field" type="tel" name="phone" placeholder="Phone number">
-							    </div>
-							    <div class="form-group row">
-							        <div class="col-md-12">
-							            <button type="reset" class="btn btn-default btn-lg btn-block text-center text-uppercase">Confirm Car Booking</button>
-							        </div>
-							    </div>
+									</div>
+								</div>							    
+								<div class="from-group">
+									<input class="form-control txt-field" type="text" name="name" placeholder="Your name">
+									<input class="form-control txt-field" type="email" name="email" placeholder="Email address">
+									<input class="form-control txt-field" type="tel" name="phone" placeholder="Phone number">
+								</div>
+								<div class="form-group row">
+									<div class="col-md-12">
+										<button type="reset" class="btn btn-default btn-lg btn-block text-center text-uppercase">Confirm Car Booking</button>
+									</div>
+								</div>
 							</form>
 						</div>											
 					</div>
@@ -549,102 +490,4 @@
 			<!-- End blog Area -->
 
 
-			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Quick links</h6>
-								<ul>
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Brand Assets</a></li>
-									<li><a href="#">Investor Relations</a></li>
-									<li><a href="#">Terms of Service</a></li>
-								</ul>								
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Features</h6>
-								<ul>
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Brand Assets</a></li>
-									<li><a href="#">Investor Relations</a></li>
-									<li><a href="#">Terms of Service</a></li>
-								</ul>								
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Resources</h6>
-								<ul>
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Brand Assets</a></li>
-									<li><a href="#">Investor Relations</a></li>
-									<li><a href="#">Terms of Service</a></li>
-								</ul>								
-							</div>
-						</div>												
-						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-							<div class="single-footer-widget">
-								<h6>Follow Us</h6>
-								<p>Let us be social</p>
-								<div class="footer-social d-flex align-items-center">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
-								</div>
-							</div>
-						</div>							
-						<div class="col-lg-4  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-									<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-			                            	<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
-			                            	<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
-
-										<div class="info"></div>
-									</form>
-								</div>
-							</div>
-						</div>	
-						<p class="mt-50 mx-auto footer-text col-lg-12">
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						</p>											
-					</div>
-				</div>
-			</footer>	
-			<!-- End footer Area -->		
-
-			<script src="<?php echo base_url('template_user/') ?>js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="<?php echo base_url('template_user/') ?>https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-			<script src="<?php echo base_url('template_user/') ?>js/vendor/bootstrap.min.js"></script>			
-			<script type="text/javascript" src="<?php echo base_url('template_user/') ?>https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-			<script src="<?php echo base_url('template_user/') ?>https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>			
-  			<script src="<?php echo base_url('template_user/') ?>js/easing.min.js"></script>			
-			<script src="<?php echo base_url('template_user/') ?>js/hoverIntent.js"></script>
-			<script src="<?php echo base_url('template_user/') ?>js/superfish.min.js"></script>	
-			<script src="<?php echo base_url('template_user/') ?>js/jquery.ajaxchimp.min.js"></script>
-			<script src="<?php echo base_url('template_user/') ?>js/jquery.magnific-popup.min.js"></script>	
-			<script src="<?php echo base_url('template_user/') ?>js/owl.carousel.min.js"></script>			
-			<script src="<?php echo base_url('template_user/') ?>js/jquery.sticky.js"></script>
-			<script src="<?php echo base_url('template_user/') ?>js/jquery.nice-select.min.js"></script>	
-			<script src="<?php echo base_url('template_user/') ?>js/waypoints.min.js"></script>
-			<script src="<?php echo base_url('template_user/') ?>js/jquery.counterup.min.js"></script>					
-			<script src="<?php echo base_url('template_user/') ?>js/parallax.min.js"></script>		
-			<script src="<?php echo base_url('template_user/') ?>js/mail-script.js"></script>	
-			<script src="<?php echo base_url('template_user/') ?>js/main.js"></script>	
-		</body>
-	</html>
-
-
-
+<?php $this->load->view('template_user/footer') ?>
