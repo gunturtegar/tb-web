@@ -3,33 +3,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users extends CI_Controller {
 
-	public function index()
+    public function __construct()
     {
-       $this->load->view('users/show');
+        parent::__construct();
+        $this->load->model('Users_m');
+    }
+    public function index()
+    {
+       $this->load->view('users/datagrid');
     }
 
     public function getAll()
     {
-        $this->load->model('Users_model');
-        $result = $this->Users_model->getAll(); 
+        $result = $this->Users_m->getAll(); 
         header("Content-Type: application/json");
         echo json_encode($result);
     }
 
     public function add(){
-        $this->load->model('Users_model');
-        $this->Users_model->save();
+        $this->Users_m->save();
     }
 
     public function update()
     {
-    	$this->load->model('Users_model');
-        $this->Users_model->update();
+        $this->Users_m->update();
     }
     public function delete()
     {
-        $this->load->model('Users_model');
         $id = $this->input->post('id'); 
-        $this->Users_model->delete($id);
+        $this->Users_m->delete($id);
     }
 }
