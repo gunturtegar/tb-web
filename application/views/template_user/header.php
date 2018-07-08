@@ -46,13 +46,17 @@
 								<li><a href="service.html">Service</a></li>
 								<li><a href="team.html">Team</a></li>	
 								<li><a href="blog-home.html">Blog</a></li>	
-								<li><a href="contact.html">Contact</a></li>	
-								<li class="menu-has-children"><a href="">Pages</a>
+								<?php if ($this->session->userdata('logged_in') != null): ?>
+									<li><a href="<?php echo base_url('Login/logout') ?>">Logout</a></li>
+									<?php else: ?>
+										<li><a href="<?php echo base_url('Login') ?>">Login</a></li>
+									<?php endif ?>	
+								<!-- <li class="menu-has-children"><a href="">Pages</a>
 									<ul>
 										<li><a href="blog-single.html">Blog Single</a></li>
 										<li><a href="elements.html">Elements</a></li>
 									</ul>
-								</li>			          
+								</li> -->			          
 							</ul>
 						</nav><!-- #nav-menu-container -->		    		
 					</div>
