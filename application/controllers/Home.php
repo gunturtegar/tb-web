@@ -20,6 +20,12 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home');
+		$data['mobil'] = $this->db->get('mobil')->result();
+		$this->load->view('home',$data);
+	}
+	public function cars()
+	{
+		$data['mobil'] = $this->db->get('mobil')->result();
+		$this->load->view('cars',$data);
 	}
 }
