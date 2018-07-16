@@ -11,7 +11,11 @@ class Login extends CI_Controller {
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('login');
 		} else {
-			redirect('Admin','refresh');
+			if ($this->session->userdata('logged_in')['level'] == 'admin') {
+				redirect('Admin','refresh');
+			}else{
+				redirect('Home','refresh');
+			}
 		}
 	}
 	public function cekDB($username)
@@ -49,6 +53,7 @@ class Login extends CI_Controller {
 		} else {
 			$set = $this->input->post();
 			$set['password'] = md5($set['password']);
+			$set['level'] = "user";
 			$this->db->insert('users',$set);
 			$id_insert = $this->db->insert_id();
 			$this->db->where('id',$id_insert);
@@ -60,7 +65,11 @@ class Login extends CI_Controller {
 				'level' => $data->level
 			);
 			$this->session->set_userdata('logged_in',$userdata);
-			redirect('Admin','refresh');
+			if ($this->session->userdata('logged_in')['level'] == 'admin') {
+				redirect('Admin','refresh');
+			}else{
+				redirect('Home','refresh');
+			}
 		}
 	}
 	public function logout()
