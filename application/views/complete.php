@@ -40,7 +40,7 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+
                         <div class="form-group">
                             <label>ID Pesanan</label>
                             <input type="text" class="form-control-plaintext" placeholder="Email" value="<?php echo $id ?>" readonly>
@@ -75,7 +75,7 @@
                              ?>
                             <input type="text" class="form-control-plaintext" placeholder="Email" value="<?php echo (int)($mobil->harga)*$beda ?>" readonly>
                         </div>
-                        <button type="submit" class="btn btn-success btn-flat m-b-15">Success</button>
+                        <a href="<?php  echo base_url() ?>" class="btn btn-success btn-flat m-b-15">Success</a>
 
                     </form>
                 </div>

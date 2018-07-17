@@ -56,18 +56,12 @@
                         <a href="<?php echo base_url('Mobil') ?>"> <i class="menu-icon fa fa-car"></i>Mobil</a>
                         
                     </li>
-                    <h3 class="menu-title">Transaksi</h3><!-- /.menu-title -->
+                    <h3 class="menu-title">Data Master</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
 
-                        <a href="<?php echo base_url('Pesan') ?>"> <i class="menu-icon fa fa-user"></i>List Pesanan</a>
+                        <a href="<?php echo base_url('Transaksi') ?>"> <i class="menu-icon fa fa-user"></i>Transaksi</a>
                         
                     </li>
-                    <li class="menu-item-has-children dropdown">
-
-                        <a href="<?php echo base_url('Sewa') ?>"> <i class="menu-icon fa fa-car"></i>Sewa</a>
-                        
-                    </li>
-                    
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
