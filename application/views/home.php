@@ -18,67 +18,50 @@
 				</div>
 				<div class="col-lg-5  col-md-6 header-right">
 					<h4 class="text-white pb-30">Book Your Car Today!</h4>
-					<form class="form" role="form" autocomplete="off">
+					<form class="form" role="form" autocomplete="off" method="post" action="<?php echo base_url('Home/pesan') ?>">
 						<div class="form-group">
 							<div class="default-select" id="default-select"">
-								<select>
+								<select name="mobil">
 									<option value="" disabled selected hidden>Select Your Car</option>
-									<option value="1">BMW</option>
-									<option value="1">Farrari</option>
-									<option value="1">Toyota</option>
+									<?php foreach ($mobil as $value): ?>
+										<option value="<?php echo $value->id ?>"><?php echo $value->nama ?></option>
+									<?php endforeach ?>
 								</select>
 							</div>
 						</div>
 						<div class="form-group row">
 							<div class="col-md-6 wrap-left">
-								<div class="default-select" id="default-select"">
-									<select>
-										<option value="" disabled selected hidden>Pickup</option>
-										<option value="1">Pickup One</option>
-										<option value="1">Pickup Two</option>
-										<option value="1">Pickup Three</option>
-										<option value="1">Pickup Four</option>
-									</select>
+								<div class="input-group dates-wrap">                                              
+									<input id="datepicker2" class="dates form-control" name="tgl_sewa" id="exampleAmount" placeholder="Tanggal Sewa" type="text">                        
+									<div class="input-group-prepend">
+										<span  class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
+									</div>											
 								</div>
 							</div>
 							<div class="col-md-6 wrap-right">
 								<div class="input-group dates-wrap">                                          
-									<input id="datepicker" class="dates form-control" id="exampleAmount" placeholder="Date & time" type="text">                        
+									<input id="datepicker" class="dates form-control" name="tgl_kembali" id="exampleAmount" placeholder="Tanggal Kembali" type="text">                        
 									<div class="input-group-prepend">
 										<span  class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
 									</div>											
 								</div>
 							</div>
-						</div>
-						<div class="form-group row">
-							<div class="col-md-6 wrap-left">
-								<div class="default-select" id="default-select"">
-									<select>
-										<option value="" disabled selected hidden>Drop off</option>
-										<option value="1">Drop off One</option>
-										<option value="1">Drop off Two</option>
-										<option value="1">Drop off Three</option>
-										<option value="1">Drop off Four</option>
-									</select>
-								</div>
+						</div>					    
+						<?php if ($this->session->userdata('logged_in') != null): ?>
+							<div class="from-group">
+								<input class="form-control txt-field" type="text" readonly value="<?php echo $users['nama']; ?>" placeholder="Name">
+								<input class="form-control txt-field" type="email"  readonly value="<?php echo $users['alamat']; ?>" placeholder="Address">
+								<input class="form-control txt-field" type="tel" readonly value="<?php echo $users['telp']; ?>" placeholder="Phone number">
+								<input class="form-control txt-field" type="tel" readonly value="<?php echo $users['nik']; ?>" placeholder="Phone number">
 							</div>
-							<div class="col-md-6 wrap-right">
-								<div class="input-group dates-wrap">                                              
-									<input id="datepicker2" class="dates form-control" id="exampleAmount" placeholder="Date & time" type="text">                        
-									<div class="input-group-prepend">
-										<span  class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
-									</div>											
-								</div>
-							</div>
-						</div>							    
-						<div class="from-group">
-							<input class="form-control txt-field" type="text" name="name" placeholder="Your name">
-							<input class="form-control txt-field" type="email" name="email" placeholder="Email address">
-							<input class="form-control txt-field" type="tel" name="phone" placeholder="Phone number">
-						</div>
+						<?php endif ?>
 						<div class="form-group row">
 							<div class="col-md-12">
-								<button type="reset" class="btn btn-default btn-lg btn-block text-center text-uppercase">Confirm Car Booking</button>
+								<?php if ($this->session->userdata('logged_in') != null): ?>
+									<button type="submit" class="btn btn-default btn-lg btn-block text-center text-uppercase">Confirm Car Booking</button>
+									<?php else: ?>
+										<a href="<?php echo base_url('Login') ?>" class="btn btn-success btn-lg btn-block text-center text-uppercase">Login First</a>
+								<?php endif ?>
 							</div>
 						</div>
 					</form>

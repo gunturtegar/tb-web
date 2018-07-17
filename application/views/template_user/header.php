@@ -26,7 +26,7 @@
 			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/magnific-popup.css">
 			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/nice-select.css">					
 			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/animate.min.css">
-			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">			
+			<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">			
 			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/owl.carousel.css">
 			<link rel="stylesheet" href="<?php echo base_url('template_user/'); ?>css/main.css">
 		</head>
